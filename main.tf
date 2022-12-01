@@ -29,7 +29,7 @@ module "RoleAssignment" {
 }
 
 module "KubernetesService" {
-  source              = ".\\webchise\\KubernetesService"
+  source              = ".\\modules\\KubernetesService"
   resource_group_name = module.ResourceGroup.rg_02_name_out
   location            = var.location
   clusterName         = var.cluster_name
@@ -40,13 +40,13 @@ module "KubernetesService" {
 }
 
 module "KubernetesSecret" {
-  source = ".\\webchise\\KubernetesSecret"
+  source = ".\\modules\\KubernetesSecret"
 }
 
 module "IngressController" {
-  source = ".\\webchise\\IngressController"
+  source = ".\\modules\\IngressController"
 }
 
 module "CertificateManager" {
-  source = ".\\webchise\\CertificateManager"
+  source = ".\\modules\\CertificateManager"
 }

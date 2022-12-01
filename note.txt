@@ -1,3 +1,0 @@
-PROVIDERS
-AKS - civo
-Traefik - 
