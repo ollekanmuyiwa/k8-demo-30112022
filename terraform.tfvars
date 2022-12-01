@@ -1,7 +1,7 @@
 
-base_name    = "webchise"
+base_name    = "ollekanmuyiwa"
 location     = "uksouth"
-cluster_name = "shared-webchise-01"
+cluster_name = "olekanmuyiwa-01"
 k8s_version  = "1.22.11"
 node_count   = 2
 environment  = "shared"

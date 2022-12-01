@@ -15,7 +15,7 @@ module "StorageAccount" {
 }
 
 module "ContainerRegistry" {
-  source              = ".\\shared\\ContainerRegistry"
+  source              = ".\\modules\\ContainerRegistry"
   resource_group_name = module.ResourceGroup.rg_01_name_out
   location            = var.location
   #location1           = "UK West"
@@ -23,7 +23,7 @@ module "ContainerRegistry" {
 }
 
 module "RoleAssignment" {
-  source            = ".\\shared\\RoleAssignment"
+  source            = ".\\modules\\RoleAssignment"
   acr_scope         = module.ContainerRegistry.acr_id
   role_principal_id = module.KubernetesService.object_id
 }
